@@ -3,4 +3,6 @@
 name = "gruvbox"
 entrypoint = "lib.typ"
 version = "0.0.1"
-description = "Gruvbox colors and utilities"
+authors = ["@arsmoriendy"]
+license = "GPL-3.0-only"
+description = "Gruvbox colors"
