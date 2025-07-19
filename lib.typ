@@ -1,7 +1,8 @@
 #import "colors.typ": colors
 
-#let themes = (
+#let theme-colors = (
   dark: (
+    strong: colors.bright,
     fg0: colors.monochrome.at(11),
     soft: (
       bg0: colors.monochrome.at(2),
@@ -14,6 +15,7 @@
     ),
   ),
   light: (
+    strong: colors.faded,
     fg0: colors.monochrome.at(3),
     soft: (
       bg0: colors.monochrome.at(14),
@@ -25,26 +27,34 @@
       bg0: colors.monochrome.at(12),
     ),
   ),
+  muted: colors.neutral,
 )
 
 #let gruvbox(
   theme: "dark",
   contrast: "hard",
+  accent: "blue",
   print: false,
   body,
 ) = {
-  let bg0 = themes.at(theme).at(contrast).at("bg0")
-  let fg0 = themes.at(theme).at("fg0")
-
+  let bg0 = theme-colors.at(theme).at(contrast).bg0
   if print {
     bg0 = white
-    fg0 = themes.light.fg0
+    theme = "light"
   }
+
+  let fg0 = theme-colors.at(theme).fg0
+  let accent = theme-colors.at(theme).strong.at(accent)
 
   set page(fill: bg0)
   set text(fill: fg0)
   set table(stroke: fg0)
   set line(stroke: fg0)
+  set highlight(fill: theme-colors.muted.yellow)
+  show highlight: set text(fill: theme-colors.light.fg0)
+  show link: set text(fill: accent)
+  show ref: set text(fill: accent)
+  show footnote: set text(fill: accent)
 
   body
 }

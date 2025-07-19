@@ -2,7 +2,7 @@
 [package]
 name = "gruvbox"
 entrypoint = "lib.typ"
-version = "0.0.1"
+version = "1.0.0"
 authors = ["@arsmoriendy"]
 license = "GPL-3.0-only"
-description = "Gruvbox colors"
+description = "Gruvbox colors."
