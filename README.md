@@ -10,7 +10,7 @@
 #show: gruvbox
 ```
 
-> [!INFO]
+> [!NOTE]
 > By default, the configuration will use the `dark` theme, `hard` contrast and `blue` accent
 
 ## Configuration
@@ -22,7 +22,8 @@ The main `gruvbox` function has 4 parameters:
 1. `accent` (string): Can be `red`, `green`, `yellow`, `blue`, `purple`, `aqua` or `orange`
 1. `print` (boolean): Setting this to true will make the background white (`#FFFFFF`) and override the `theme` as light mode
 
-> [!EXAMPLE]
+> [!TIP]
+> For example:
 >
 > ```typst
 > #import "@preview/gruvbox:1.0.0": gruvbox
@@ -57,7 +58,9 @@ Within the snippet above:
       - `bg0` as the background color of each respective contrast
   - `muted` colors that maps to `neutral` within the `colors` dictionary
 
-> [!EXAMPLE]
+> [!TIP]
+>
+> For example:
 >
 > ```typst
 > #import "@preview/gruvbox:1.0.0": colors, theme-colors
