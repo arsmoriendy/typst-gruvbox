@@ -70,3 +70,7 @@ Within the snippet above:
 > #text(fill: theme-colors.light.strong.purple)[Example]
 > #text(fill: theme-colors.muted.green)[Example]
 > ```
+
+## Credits
+
+Original Gruvbox Vim theme by morhetz https://github.com/morhetz/gruvbox
