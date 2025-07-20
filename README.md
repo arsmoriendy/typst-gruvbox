@@ -51,7 +51,7 @@ Within the snippet above:
 - `theme-colors` is a higher level dictionary consisting:
 
   - `light` and `dark` theme dictionaries, each consisting:
-    - `strong` dictionary that maps to either `bright` or `faded` within the `colors` dicitonary respective to the selected theme
+    - `strong` dictionary that maps to either `bright` or `faded` within the `colors` dictionary respective to the selected theme
     - `fg0` that represents the foreground color of each respective theme
     - `soft`, `medium` and `hard` contrast dictionaries that has:
       - `bg0` as the background color of each respective contrast
