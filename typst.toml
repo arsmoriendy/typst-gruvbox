@@ -8,4 +8,5 @@ license = "MIT"
 description = "Gruvbox colors."
 exclude = ["./examples/main.pdf"]
 keywords = ["theme", "gruvbox"]
+repository = "https://github.com/arsmoriendy/typst-gruvbox"
 categories = ["components"]
