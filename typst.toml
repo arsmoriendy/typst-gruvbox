@@ -7,3 +7,5 @@ authors = ["@arsmoriendy"]
 license = "MIT"
 description = "Gruvbox colors."
 exclude = ["./examples/main.pdf"]
+keywords = ["theme", "gruvbox"]
+categories = ["components"]
