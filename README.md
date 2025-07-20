@@ -47,7 +47,7 @@ Within the snippet above:
     - `purple`
     - `aqua`
     - `orange`
-  - `monochrome` with an array value of ascending monochrome colors from 0 to 14
+  - `monochrome` with an array value of colors from 0 to 14 ascending in brightness
 - `theme-colors` is a higher level dictionary consisting:
 
   - `light` and `dark` theme dictionaries, each consisting:
