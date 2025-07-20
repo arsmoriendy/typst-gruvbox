@@ -3,7 +3,7 @@
 name = "gruvbox"
 entrypoint = "lib.typ"
 version = "1.0.0"
-authors = ["@arsmoriendy"]
+authors = ["arsmoriendy <@arsmoriendy>"]
 license = "MIT"
 description = "Gruvbox colors."
 exclude = ["./examples/main.pdf"]
