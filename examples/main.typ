@@ -23,12 +23,10 @@
   }
 }
 
-#let muted-cells = color-grid-cells(theme-colors.muted)
-
 #let color-grid(cells) = grid(
   columns: cells.len(),
   ..cells,
-  ..muted-cells
+  ..color-grid-cells(theme-colors.muted)
 )
 
 #let dark-color-grid = color-grid(color-grid-cells(theme-colors.dark.strong))
