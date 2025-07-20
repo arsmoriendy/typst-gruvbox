@@ -1,4 +1,6 @@
 #import "colors.typ": colors
+#import "schemas.typ" as sch
+#import "@preview/valkyrie:0.2.2" as z
 
 #let theme-colors = (
   dark: (
@@ -30,6 +32,10 @@
   muted: colors.neutral,
 )
 
+/// - theme (string): Can be `light` or `dark`
+/// - contrast (string): Can be `soft`, `medium` or `hard`
+/// - accent (string): Can be `red`, `green`, `yellow`, `blue`, `purple`, `aqua` or `orange`
+/// - print (boolean): Setting this to true will make the background white (`#FFFFFF`) and override the `theme` as light mode
 #let gruvbox(
   theme: "dark",
   contrast: "hard",
@@ -37,6 +43,10 @@
   print: false,
   body,
 ) = {
+  theme = z.parse(theme, sch.available-themes)
+  contrast = z.parse(contrast, sch.available-contrasts)
+  accent = z.parse(accent, sch.available-accent-colors)
+
   let bg0 = theme-colors.at(theme).at(contrast).bg0
   if print {
     bg0 = white
