@@ -6,3 +6,4 @@ version = "1.0.0"
 authors = ["@arsmoriendy"]
 license = "MIT"
 description = "Gruvbox colors."
+exclude = ["./examples/main.pdf"]
