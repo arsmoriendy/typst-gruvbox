@@ -4,5 +4,5 @@ name = "gruvbox"
 entrypoint = "lib.typ"
 version = "1.0.0"
 authors = ["@arsmoriendy"]
-license = "GPL-3.0-only"
+license = "MIT"
 description = "Gruvbox colors."
