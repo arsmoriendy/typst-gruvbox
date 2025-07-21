@@ -1,5 +1,3 @@
-# Gruvbox for Typst
-
 ![Example screenshot](./assets/output3.jpg)
 
 ## Usage
@@ -10,9 +8,6 @@
 #show: gruvbox
 ```
 
-> [!NOTE]
-> By default, the configuration will use the `dark` theme, `hard` contrast and `blue` accent
-
 ## Configuration
 
 The main `gruvbox` function has 4 parameters:
@@ -22,14 +17,15 @@ The main `gruvbox` function has 4 parameters:
 1. `accent` (string): Can be `red`, `green`, `yellow`, `blue`, `purple`, `aqua` or `orange`
 1. `print` (boolean): Setting this to true will make the background white (`#FFFFFF`) and override the `theme` as light mode
 
-> [!TIP]
-> For example:
->
-> ```typst
-> #import "@preview/gruvbox:1.0.0": gruvbox
->
-> #show: gruvbox.with(theme: "light", contrast: `soft`, accent: `orange`)
-> ```
+By default, the configuration will use the `dark` theme, `hard` contrast and `blue` accent
+
+For example:
+
+```typst
+#import "@preview/gruvbox:1.0.0": gruvbox
+
+#show: gruvbox.with(theme: "light", contrast: `soft`, accent: `orange`)
+```
 
 ## Accessing colors
 
@@ -58,18 +54,16 @@ Within the snippet above:
       - `bg0` as the background color of each respective contrast
   - `muted` colors that maps to `neutral` within the `colors` dictionary
 
-> [!TIP]
->
-> For example:
->
-> ```typst
-> #import "@preview/gruvbox:1.0.0": colors, theme-colors
->
-> #text(fill: colors.bright.red)[Example]
-> #text(fill: colors.monochrome.at(0))[Example]
-> #text(fill: theme-colors.light.strong.purple)[Example]
-> #text(fill: theme-colors.muted.green)[Example]
-> ```
+For example:
+
+```typst
+#import "@preview/gruvbox:1.0.0": colors, theme-colors
+
+#text(fill: colors.bright.red)[Example]
+#text(fill: colors.monochrome.at(0))[Example]
+#text(fill: theme-colors.light.strong.purple)[Example]
+#text(fill: theme-colors.muted.green)[Example]
+```
 
 ## Credits
 
