@@ -24,7 +24,7 @@ For example:
 ```typst
 #import "@preview/gruvbox:1.0.0": gruvbox
 
-#show: gruvbox.with(theme: "light", contrast: `soft`, accent: `orange`)
+#show: gruvbox.with(theme: "light", contrast: "soft", accent: "orange")
 ```
 
 ## Accessing colors
