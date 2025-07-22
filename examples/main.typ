@@ -1,4 +1,4 @@
-#import "@local/gruvbox:1.0.0": gruvbox, theme-colors
+#import "@local/gruvy:1.0.0": gruvbox, theme-colors
 
 #set page(paper: "a7", height: auto)
 #let content = [
@@ -12,7 +12,7 @@
       ([cell \##(i + 1)],)
     },
   )
-  #link("https://github.com/arsmoriendy/typst-gruvbox")
+  #link("https://github.com/arsmoriendy/typst-gruvy")
 ]
 
 /// - clrs (array)
