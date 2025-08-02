@@ -1,4 +1,4 @@
-#import "@local/gruvy:1.0.0": gruvbox, theme-colors
+#import "../lib.typ": gruvbox, theme-colors
 
 #set page(paper: "a7", height: auto)
 #let content = [
