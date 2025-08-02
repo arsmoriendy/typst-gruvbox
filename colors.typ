@@ -1,3 +1,4 @@
+/// Should contain no duplicate colors; otherwise, use `theme-colors` instead
 #let colors = (
   bright: (
     red: rgb("#FB4934"),

@@ -2,6 +2,7 @@
 #import "schemas.typ" as sch
 #import "@preview/valkyrie:0.2.2" as z
 
+/// Higher level abstraction for `colors`
 #let theme-colors = (
   dark: (
     strong: colors.bright,
