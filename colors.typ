@@ -1,6 +1,6 @@
-/// Should contain no duplicate colors; otherwise, use `theme-colors` instead
+// Maps to #link("https://github.com/morhetz/gruvbox-contrib/blob/150e9ca30fcd679400dc388c24930e5ec8c98a9f/color.table")[gruvbox-contrib color table], but contains no duplicate colors.
 #let colors = (
-  // -> dark strong colors
+  // -> dark.strong
   bright: (
     red: rgb("#FB4934"),
     green: rgb("#B8BB26"),
@@ -10,7 +10,7 @@
     aqua: rgb("#8EC07C"),
     orange: rgb("#FE8019"),
   ),
-  // -> muted colors
+  // -> muted
   neutral: (
     red: rgb("#CC241D"),
     green: rgb("#98971A"),
@@ -20,7 +20,7 @@
     aqua: rgb("#689D6A"),
     orange: rgb("#D65D0E"),
   ),
-  // -> light strong colors
+  // -> light.strong
   faded: (
     red: rgb("#9D0006"),
     green: rgb("#79740E"),
@@ -30,23 +30,23 @@
     aqua: rgb("#427B58"),
     orange: rgb("#AF3A03"),
   ),
-  monochrome: (
-    // dark backgrounds / light foregrounds
-    rgb("#1d2021"), // 0 -> theme-colors.dark.hard.bg0
-    rgb("#282828"), // 1 -> theme-colors.dark.medium.bg0
-    rgb("#32302f"), // 2 -> theme-colors.dark.soft.bg0
-    rgb("#3c3836"), // 3 -> theme-colors.light.fg0
-    rgb("#504945"), // 4
-    rgb("#665c54"), // 5
-    rgb("#7c6f64"), // 6
-    rgb("#928374"), // 7
-    // dark foregrounds / light backgrounds
-    rgb("#a89984"), // 8
-    rgb("#bdae93"), // 9
-    rgb("#d5c4a1"), // 10
-    rgb("#ebdbb2"), // 11 -> theme-colors.dark.fg0
-    rgb("#f2e5bc"), // 12 -> theme-colors.light.hard.bg0
-    rgb("#fbf1c7"), // 13 -> theme-colors.light.medium.bg0
-    rgb("#f9f5d7"), // 14 -> theme-colors.light.soft.bg0
-  ),
+  // INFO: Why are these not stored in an array?
+  // 1) Typst has a longer syntax to index arrays (i.e. `at(i)` method).
+  // 2) LSPs don't show the length of an array, it would be hard for the user to
+  //    know the limits of a colorset.
+  dark0-hard: rgb("#1d2021"),
+  dark0: rgb("#282828"), // -> dark.medium.bg0
+  dark0-soft: rgb("#32302f"),
+  dark1: rgb("#3c3836"), // -> light.fg0
+  dark2: rgb("#504945"),
+  dark3: rgb("#665c54"),
+  dark4: rgb("#7c6f64"),
+  gray: rgb("#928374"),
+  light4: rgb("#a89984"),
+  light3: rgb("#bdae93"),
+  light2: rgb("#d5c4a1"),
+  light1: rgb("#ebdbb2"), // -> dark.fg0
+  light0-soft: rgb("#f2e5bc"),
+  light0: rgb("#fbf1c7"), // -> light.medium.bg0
+  light0-hard: rgb("#f9f5d7"),
 )

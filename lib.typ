@@ -6,28 +6,28 @@
 #let theme-colors = (
   dark: (
     strong: colors.bright,
-    fg0: colors.monochrome.at(11),
+    fg0: colors.light1,
     soft: (
-      bg0: colors.monochrome.at(2),
+      bg0: colors.dark0-soft,
     ),
     medium: (
-      bg0: colors.monochrome.at(1),
+      bg0: colors.dark1,
     ),
     hard: (
-      bg0: colors.monochrome.at(0),
+      bg0: colors.dark0-hard,
     ),
   ),
   light: (
     strong: colors.faded,
-    fg0: colors.monochrome.at(3),
+    fg0: colors.dark1,
     soft: (
-      bg0: colors.monochrome.at(14),
+      bg0: colors.light0-soft,
     ),
     medium: (
-      bg0: colors.monochrome.at(13),
+      bg0: colors.light0,
     ),
     hard: (
-      bg0: colors.monochrome.at(12),
+      bg0: colors.light0-hard,
     ),
   ),
   muted: colors.neutral,
