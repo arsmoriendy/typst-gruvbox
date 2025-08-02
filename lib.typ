@@ -11,7 +11,7 @@
       bg0: colors.dark0-soft,
     ),
     medium: (
-      bg0: colors.dark1,
+      bg0: colors.dark0,
     ),
     hard: (
       bg0: colors.dark0-hard,
