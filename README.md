@@ -44,9 +44,22 @@ Within the snippet above:
     - `purple`
     - `aqua`
     - `orange`
-  - `monochrome` with an array value of colors from 0 to 14 ascending in brightness
+  - `dark0-hard` - monochrome colors in ascending brightness
+  - `dark0`
+  - `dark0-soft`
+  - `dark1`
+  - `dark2`
+  - `dark3`
+  - `dark4`
+  - `gray`
+  - `light4`
+  - `light3`
+  - `light2`
+  - `light1`
+  - `light0-soft`
+  - `light0`
+  - `light0-hard`
 - `theme-colors` is a higher level dictionary consisting:
-
   - `light` and `dark` theme dictionaries, each consisting:
     - `strong` dictionary that maps to either `bright` or `faded` within the `colors` dictionary respective to the selected theme
     - `fg0` that represents the foreground color of each respective theme
