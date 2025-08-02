@@ -1,9 +1,9 @@
-# link to local package on file change
 dev:
   watchexec -e typ,bib just test
 
+# link to local package
 link:
-  watchexec utpm ws l -f
+  utpm ws l -f
 
 [working-directory: "test"]
 test:
