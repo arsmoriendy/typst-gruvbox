@@ -1,5 +1,5 @@
 dev:
-  watchexec -e typ,bib just test
+  watchexec -c -e typ,bib just test
 
 # link to local package
 link:
