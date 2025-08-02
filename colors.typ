@@ -1,5 +1,6 @@
 /// Should contain no duplicate colors; otherwise, use `theme-colors` instead
 #let colors = (
+  // -> dark strong colors
   bright: (
     red: rgb("#FB4934"),
     green: rgb("#B8BB26"),
@@ -9,6 +10,7 @@
     aqua: rgb("#8EC07C"),
     orange: rgb("#FE8019"),
   ),
+  // -> muted colors
   neutral: (
     red: rgb("#CC241D"),
     green: rgb("#98971A"),
@@ -18,6 +20,7 @@
     aqua: rgb("#689D6A"),
     orange: rgb("#D65D0E"),
   ),
+  // -> light strong colors
   faded: (
     red: rgb("#9D0006"),
     green: rgb("#79740E"),
@@ -29,10 +32,10 @@
   ),
   monochrome: (
     // dark backgrounds / light foregrounds
-    rgb("#1d2021"), // 0
-    rgb("#282828"), // 1
-    rgb("#32302f"), // 2
-    rgb("#3c3836"), // 3
+    rgb("#1d2021"), // 0 -> theme-colors.dark.hard.bg0
+    rgb("#282828"), // 1 -> theme-colors.dark.medium.bg0
+    rgb("#32302f"), // 2 -> theme-colors.dark.soft.bg0
+    rgb("#3c3836"), // 3 -> theme-colors.light.fg0
     rgb("#504945"), // 4
     rgb("#665c54"), // 5
     rgb("#7c6f64"), // 6
@@ -41,9 +44,9 @@
     rgb("#a89984"), // 8
     rgb("#bdae93"), // 9
     rgb("#d5c4a1"), // 10
-    rgb("#ebdbb2"), // 11
-    rgb("#f2e5bc"), // 12
-    rgb("#fbf1c7"), // 13
-    rgb("#f9f5d7"), // 14
+    rgb("#ebdbb2"), // 11 -> theme-colors.dark.fg0
+    rgb("#f2e5bc"), // 12 -> theme-colors.light.hard.bg0
+    rgb("#fbf1c7"), // 13 -> theme-colors.light.medium.bg0
+    rgb("#f9f5d7"), // 14 -> theme-colors.light.soft.bg0
   ),
 )
