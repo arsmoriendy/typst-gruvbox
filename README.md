@@ -1,12 +1,12 @@
 ## Examples
 
-| Dark Hard                                   | Dark Medium                                   | Dark Soft                                   |
-| ------------------------------------------- | --------------------------------------------- | ------------------------------------------- |
-| [dark-hard-example](./assets/example-1.png) | [dark-medium-example](./assets/example-2.png) | [dark-hard-example](./assets/example-3.png) |
-
-| Light Hard                                   | Light Medium                                   | Light Soft                                   |
+| Dark Hard                                    | Dark Medium                                    | Dark Soft                                    |
 | -------------------------------------------- | ---------------------------------------------- | -------------------------------------------- |
-| [light-hard-example](./assets/example-4.png) | [light-medium-example](./assets/example-5.png) | [light-hard-example](./assets/example-6.png) |
+| ![dark-hard-example](./assets/example-1.png) | ![dark-medium-example](./assets/example-2.png) | ![dark-hard-example](./assets/example-3.png) |
+
+| Light Hard                                    | Light Medium                                    | Light Soft                                    |
+| --------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
+| ![light-hard-example](./assets/example-4.png) | ![light-medium-example](./assets/example-5.png) | ![light-hard-example](./assets/example-6.png) |
 
 ## Simple usage example
 
