@@ -1,10 +1,19 @@
 ![Example screenshot](./assets/output3.jpg)
 
-## Usage
+# Simple usage example
 
 ```typst
-#import "@preview/gruvy:2.0.0": gruvbox, theme-colors
+#import "@preview/gruvy:2.0.0": gruvbox
 
+#show: gruvbox
+```
+
+# In-depth usage example
+
+```typst
+#import "@preview/gruvy:2.0.0": gruvbox, theme-colors, colors
+
+// choose your preferred theme
 #let theme-color = theme-colors.dark.hard
 
 #show: gruvbox.with(
@@ -13,7 +22,11 @@
     hl: theme-color.muted.yellow,
     print: false,
 )
+
+#text(fill: colors.bright.orange)[Hello world!]
 ```
+
+# Reference
 
 The main `gruvbox` function the following parameters (excluding `body`):
 
@@ -22,7 +35,7 @@ The main `gruvbox` function the following parameters (excluding `body`):
 - `hl` (color|none): Highlight colors. Defaults to `theme-color.muted.yellow`.
 - `print` (boolean): Wether or not to make the background pure white (`#FFFFFF`) and force light colors with hard contrast.
 
-You can access the following colors from the `theme-color` variable (or any other color presets from `theme-colors`, e.g. `theme-colors.light.hard`)
+You can access the following colors from your preferred color preset (i.e. the `theme-color` variable) or any other color presets from `theme-colors` (e.g. `theme-colors.light.hard`)
 
 - `muted`
 - `strong`
@@ -63,6 +76,6 @@ You can import `colors` which is a lower level color dictionary, with no duplica
 - `light0`
 - `light0-hard`
 
-## Credits
+# Credits
 
 Original Gruvbox Vim theme by morhetz https://github.com/morhetz/gruvbox
