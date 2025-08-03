@@ -1,11 +1,8 @@
+set shell := ["sh", "-c"]
 set dotenv-load := true
 
 dev:
-  watchexec -c -e typ,bib just test
-
-# link to local package
-link:
-  utpm ws l -f
+  watchexec -c=clear just test compile-examples link link-preview
 
 [working-directory: "test"]
 test:
@@ -14,6 +11,10 @@ test:
 [working-directory: "test"]
 compile-examples:
   typst compile --root=.. --pages=1-6 --format=png main.typ ../assets/example-{p}.png
+
+# link to local package
+link:
+  utpm ws l -f
 
 link-preview:
   #!/usr/bin/env nu
