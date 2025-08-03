@@ -1,68 +1,131 @@
 #import "colors.typ": colors
-#import "schemas.typ" as sch
-#import "@preview/valkyrie:0.2.2" as z
 
-/// Higher level abstraction for `colors`
+/// Higher level abstraction for `colors`, may contain duplicates
 #let theme-colors = (
   dark: (
-    strong: colors.bright,
-    fg0: colors.light1,
     soft: (
+      muted: colors.neutral,
+      strong: colors.bright,
+      fg0: colors.light0,
+      fg1: colors.light1,
+      fg2: colors.light2,
+      fg3: colors.light3,
+      fg4: colors.light4,
       bg0: colors.dark0-soft,
+      bg1: colors.dark1,
+      bg2: colors.dark2,
+      bg3: colors.dark3,
+      bg4: colors.dark4,
     ),
     medium: (
+      muted: colors.neutral,
+      strong: colors.bright,
+      fg0: colors.light0,
+      fg1: colors.light1,
+      fg2: colors.light2,
+      fg3: colors.light3,
+      fg4: colors.light4,
       bg0: colors.dark0,
+      bg1: colors.dark1,
+      bg2: colors.dark2,
+      bg3: colors.dark3,
+      bg4: colors.dark4,
     ),
     hard: (
+      muted: colors.neutral,
+      strong: colors.bright,
+      fg0: colors.light0,
+      fg1: colors.light1,
+      fg2: colors.light2,
+      fg3: colors.light3,
+      fg4: colors.light4,
       bg0: colors.dark0-hard,
+      bg1: colors.dark1,
+      bg2: colors.dark2,
+      bg3: colors.dark3,
+      bg4: colors.dark4,
     ),
   ),
   light: (
-    strong: colors.faded,
-    fg0: colors.dark1,
     soft: (
+      muted: colors.neutral,
+      strong: colors.faded,
+      fg0: colors.dark0,
+      fg1: colors.dark1,
+      fg2: colors.dark2,
+      fg3: colors.dark3,
+      fg4: colors.dark4,
       bg0: colors.light0-soft,
+      bg1: colors.light1,
+      bg2: colors.light2,
+      bg3: colors.light3,
+      bg4: colors.light4,
     ),
     medium: (
+      muted: colors.neutral,
+      strong: colors.faded,
+      fg0: colors.dark0,
+      fg1: colors.dark1,
+      fg2: colors.dark2,
+      fg3: colors.dark3,
+      fg4: colors.dark4,
       bg0: colors.light0,
+      bg1: colors.light1,
+      bg2: colors.light2,
+      bg3: colors.light3,
+      bg4: colors.light4,
     ),
     hard: (
+      muted: colors.neutral,
+      strong: colors.faded,
+      fg0: colors.dark0,
+      fg1: colors.dark1,
+      fg2: colors.dark2,
+      fg3: colors.dark3,
+      fg4: colors.dark4,
       bg0: colors.light0-hard,
+      bg1: colors.light1,
+      bg2: colors.light2,
+      bg3: colors.light3,
+      bg4: colors.light4,
     ),
   ),
-  muted: colors.neutral,
 )
 
-/// - theme (string): Can be `light` or `dark`
-/// - contrast (string): Can be `soft`, `medium` or `hard`
-/// - accent (string): Can be `red`, `green`, `yellow`, `blue`, `purple`, `aqua` or `orange`
-/// - print (boolean): Setting this to true will make the background white (`#FFFFFF`) and override the `theme` as light mode
+/// - theme-color (dictionary): Can be any of the presets from `theme-colors` (i.e. `theme-colors.{dark/light}.{light/medium/hard}`). Defaults to dark mode with hard contrast.
+/// - accent (color|none): Accent color for links, refs and footnote. Defaults to `theme-color.strong.blue`.
+/// - hl (color|none): Highlight colors. Defaults to `theme-color.muted.yellow`.
+/// - print (boolean): Wether or not to make the background pure white (`#FFFFFF`) and force light colors with hard contrast
 #let gruvbox(
-  theme: "dark",
-  contrast: "hard",
-  accent: "blue",
+  theme-color: theme-colors.dark.hard,
+  accent: none,
+  hl: none,
   print: false,
   body,
 ) = {
-  theme = z.parse(theme, sch.available-themes)
-  contrast = z.parse(contrast, sch.available-contrasts)
-  accent = z.parse(accent, sch.available-accent-colors)
+  let bg0 = theme-color.bg0
 
-  let bg0 = theme-colors.at(theme).at(contrast).bg0
   if print {
     bg0 = white
-    theme = "light"
+    theme-color = theme-colors.light.hard
   }
 
-  let fg0 = theme-colors.at(theme).fg0
-  let accent = theme-colors.at(theme).strong.at(accent)
+  let fg0 = theme-color.fg0
+
+  if accent == none {
+    accent = theme-color.strong.blue
+  }
+
+  if hl == none {
+    hl = theme-color.muted.yellow
+  }
 
   set page(fill: bg0)
   set text(fill: fg0)
   set table(stroke: fg0)
   set line(stroke: fg0)
-  set highlight(fill: theme-colors.muted.yellow)
-  show highlight: set text(fill: theme-colors.light.fg0)
+  set highlight(fill: hl)
+  show highlight: set text(fill: fg0)
   show link: set text(fill: accent)
   show ref: set text(fill: accent)
   show footnote: set text(fill: accent)

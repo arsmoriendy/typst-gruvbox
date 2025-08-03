@@ -26,31 +26,48 @@
 #let color-grid(cells) = grid(
   columns: cells.len(),
   ..cells,
-  ..color-grid-cells(theme-colors.muted)
+  ..color-grid-cells(theme-colors.dark.hard.muted)
 )
 
-#let dark-color-grid = color-grid(color-grid-cells(theme-colors.dark.strong))
-#let light-color-grid = color-grid(color-grid-cells(theme-colors.light.strong))
+#let dark-color-grid = color-grid(color-grid-cells(
+  theme-colors.dark.hard.strong,
+))
+#let light-color-grid = color-grid(color-grid-cells(
+  theme-colors.light.hard.strong,
+))
 
-#show: gruvbox.with(theme: "dark", contrast: "hard")
+// `theme-color` tests
+#show: gruvbox.with(theme-color: theme-colors.dark.hard)
 #content
 #dark-color-grid
-#show: gruvbox.with(theme: "dark", contrast: "medium")
+#show: gruvbox.with(theme-color: theme-colors.dark.medium)
 #content
 #dark-color-grid
-#show: gruvbox.with(theme: "dark", contrast: "soft")
+#show: gruvbox.with(theme-color: theme-colors.dark.soft)
 #content
 #dark-color-grid
-#show: gruvbox.with(theme: "light", contrast: "hard")
+#show: gruvbox.with(theme-color: theme-colors.light.hard)
 #content
 #light-color-grid
-#show: gruvbox.with(theme: "light", contrast: "medium")
+#show: gruvbox.with(theme-color: theme-colors.light.medium)
 #content
 #light-color-grid
-#show: gruvbox.with(theme: "light", contrast: "soft")
+#show: gruvbox.with(theme-color: theme-colors.light.soft)
 #content
 #light-color-grid
+
+// `print` test
 #show: gruvbox.with(print: true)
+#content
+#light-color-grid
+
+// `hilight` test
+#show: gruvbox.with(hl: red)
+#content
+#light-color-grid
+
+// `accent` test
+#show: gruvbox.with(accent: red)
 #content
 #light-color-grid
 
