@@ -1,6 +1,6 @@
 ![Example screenshot](assets/example.webp)
 
-# Simple usage example
+## Simple usage example
 
 ```typst
 #import "@preview/gruvy:2.0.0": gruvbox
@@ -8,7 +8,7 @@
 #show: gruvbox
 ```
 
-# In-depth usage example
+## In-depth usage example
 
 ```typst
 #import "@preview/gruvy:2.0.0": gruvbox, theme-colors, colors
@@ -26,7 +26,7 @@
 #text(fill: colors.bright.orange)[Hello world!]
 ```
 
-# Reference
+## Reference
 
 The main `gruvbox` function the following parameters (excluding `body`):
 
@@ -76,6 +76,6 @@ You can import `colors` which is a lower level color dictionary, with no duplica
 - `light0`
 - `light0-hard`
 
-# Credits
+## Credits
 
 Original Gruvbox Vim theme by morhetz https://github.com/morhetz/gruvbox
