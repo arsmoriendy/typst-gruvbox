@@ -3,80 +3,65 @@
 ## Usage
 
 ```typst
-#import "@preview/gruvy:1.0.0": gruvbox
+#import "@preview/gruvy:2.0.0": gruvbox, theme-colors
 
-#show: gruvbox
+#let theme-color = theme-colors.dark.hard
+
+#show: gruvbox.with(
+    theme-color: theme-color,
+    accent: theme-color.strong.blue,
+    hl: theme-color.muted.yellow,
+    print: false,
+)
 ```
 
-## Configuration
+The main `gruvbox` function the following parameters (excluding `body`):
 
-The main `gruvbox` function has 4 parameters:
+- `theme-color` (dictionary): Can be any of the presets from `theme-colors` (i.e. `theme-colors.{dark/light}.{light/medium/hard}`). Defaults to `theme-colors.dark.hard`.
+- `accent` (color|none): Accent color for links, refs and footnote. Defaults to `theme-color.strong.blue`.
+- `hl` (color|none): Highlight colors. Defaults to `theme-color.muted.yellow`.
+- `print` (boolean): Wether or not to make the background pure white (`#FFFFFF`) and force light colors with hard contrast.
 
-1. `theme` (string): Can be `light` or `dark`
-1. `contrast` (string): Can be `soft`, `medium` or `hard`
-1. `accent` (string): Can be `red`, `green`, `yellow`, `blue`, `purple`, `aqua` or `orange`
-1. `print` (boolean): Setting this to true will make the background white (`#FFFFFF`) and override the `theme` as light mode
+You can access the following colors from the `theme-color` variable (or any other color presets from `theme-colors`, e.g. `theme-colors.light.hard`)
 
-By default, the configuration will use the `dark` theme, `hard` contrast and `blue` accent
+- `muted`
+- `strong`
+- `fg0`
+- `fg1`
+- `fg2`
+- `fg3`
+- `fg4`
+- `bg0`
+- `bg1`
+- `bg2`
+- `bg3`
+- `bg4`
 
-For example:
+You can import `colors` which is a lower level color dictionary, with no duplicates, and the following keys:
 
-```typst
-#import "@preview/gruvy:1.0.0": gruvbox
-
-#show: gruvbox.with(theme: "light", contrast: "soft", accent: "orange")
-```
-
-## Accessing colors
-
-```typst
-#import "@preview/gruvy:1.0.0": colors, theme-colors
-```
-
-Within the snippet above:
-
-- `colors` is a dictionary with the following keys:
-  - `bright`, `neutral` and `faded`, each with a dictionary value with the following keys:
-    - `red`
-    - `green`
-    - `yellow`
-    - `blue`
-    - `purple`
-    - `aqua`
-    - `orange`
-  - `dark0-hard` - monochrome colors in ascending brightness
-  - `dark0`
-  - `dark0-soft`
-  - `dark1`
-  - `dark2`
-  - `dark3`
-  - `dark4`
-  - `gray`
-  - `light4`
-  - `light3`
-  - `light2`
-  - `light1`
-  - `light0-soft`
-  - `light0`
-  - `light0-hard`
-- `theme-colors` is a higher level dictionary consisting:
-  - `light` and `dark` theme dictionaries, each consisting:
-    - `strong` dictionary that maps to either `bright` or `faded` within the `colors` dictionary respective to the selected theme
-    - `fg0` that represents the foreground color of each respective theme
-    - `soft`, `medium` and `hard` contrast dictionaries that has:
-      - `bg0` as the background color of each respective contrast
-  - `muted` colors that maps to `neutral` within the `colors` dictionary
-
-For example:
-
-```typst
-#import "@preview/gruvy:1.0.0": colors, theme-colors
-
-#text(fill: colors.bright.red)[Example]
-#text(fill: colors.monochrome.at(0))[Example]
-#text(fill: theme-colors.light.strong.purple)[Example]
-#text(fill: theme-colors.muted.green)[Example]
-```
+- `bright`, `neutral` and `faded`, each with a dictionary value with the following keys:
+  - `red`
+  - `green`
+  - `yellow`
+  - `blue`
+  - `purple`
+  - `aqua`
+  - `orange`
+- `dark0-hard` - monochrome colors in ascending brightness
+- `dark0`
+- `dark0-soft`
+- `dark1`
+- `dark2`
+- `dark3`
+- `dark4`
+- `gray`
+- `light4`
+- `light3`
+- `light2`
+- `light1`
+- `light0-soft`
+- `light0`
+- `light0-hard`
 
 ## Credits
 

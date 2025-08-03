@@ -92,10 +92,10 @@
   ),
 )
 
-/// - theme-color (dictionary): Can be any of the presets from `theme-colors` (i.e. `theme-colors.{dark/light}.{light/medium/hard}`). Defaults to dark mode with hard contrast.
+/// - theme-color (dictionary): Can be any of the presets from `theme-colors` (i.e. `theme-colors.{dark/light}.{light/medium/hard}`). Defaults to `theme-colors.dark.hard`.
 /// - accent (color|none): Accent color for links, refs and footnote. Defaults to `theme-color.strong.blue`.
 /// - hl (color|none): Highlight colors. Defaults to `theme-color.muted.yellow`.
-/// - print (boolean): Wether or not to make the background pure white (`#FFFFFF`) and force light colors with hard contrast
+/// - print (boolean): Wether or not to make the background pure white (`#FFFFFF`) and force light colors with hard contrast.
 #let gruvbox(
   theme-color: theme-colors.dark.hard,
   accent: none,
