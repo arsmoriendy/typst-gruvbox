@@ -1,4 +1,4 @@
-![Example screenshot](./assets/output3.jpg)
+![Example screenshot](assets/example.webp)
 
 # Simple usage example
 
