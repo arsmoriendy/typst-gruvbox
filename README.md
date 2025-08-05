@@ -15,7 +15,7 @@
 - Apply Gruvbox colors for common typst components (e.g. page bg/fg, borders, links; via `gruvbox`)
 - Supports printable documents
 - Code highlighting within `raw` elements
-- Extendable to other plugins (see [#in-depth-usage-example])
+- Extendable to other plugins (see [In-depth usage example](#in-depth-usage-example))
 
 ## Simple usage example
 
