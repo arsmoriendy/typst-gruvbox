@@ -125,6 +125,9 @@
   set table(stroke: fg0)
   set line(stroke: fg0)
   set highlight(fill: hl)
+  set raw(theme: if theme-color.fg0 == colors.dark0 {
+    "gruvboxLight.tmTheme"
+  } else { "gruvboxDark.tmTheme" })
   show highlight: set text(fill: fg0)
   show link: set text(fill: accent)
   show ref: set text(fill: accent)

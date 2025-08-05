@@ -3,15 +3,18 @@
 #set page(paper: "a7", height: auto)
 #let content = [
   = #lorem(4)
-  #lorem(15)#footnote[#lorem(5)]
+  #footnote[#lorem(5)]
   #highlight(lorem(3))@smith2023quantum
   #line()
   #table(
     columns: 3,
-    ..for i in range(6) {
+    ..for i in range(3) {
       ([cell \##(i + 1)],)
     },
   )
+  ```typ
+  #set text(size: 10pt)
+  ```
   #link("https://github.com/arsmoriendy/typst-gruvy")
 ]
 
