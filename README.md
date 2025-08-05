@@ -21,16 +21,31 @@
 ```typst
 #import "@preview/gruvy:2.0.0": gruvbox, theme-colors, colors
 
-// choose your preferred theme
+// choose your preferred theme color
 #let theme-color = theme-colors.dark.hard
 
+// apply colors to common typst components
 #show: gruvbox.with(
+    // use your preferred theme color as a default preset
     theme-color: theme-color,
+    // customize `ref`, `link` and `footnote` colors
     accent: theme-color.strong.blue,
+    // customize `highlight` color
     hl: theme-color.muted.yellow,
+    // is the document printable?
     print: false,
 )
 
+// extend your preferred theme color to other plugins (e.g. gentle-clues)
+#import "@preview/gentle-clues:1.2.0": clue
+#let info-color = theme-color.strong.blue
+#let info = clue.with(
+  accent-color: info-color,
+  header-color: info-color.darken(40%),
+  border-color: info-color.darken(50%),
+)
+
+// use colors outside of your preferred theme color
 #text(fill: colors.bright.orange)[Hello world!]
 ```
 
