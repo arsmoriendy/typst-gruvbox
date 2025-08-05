@@ -8,6 +8,15 @@
 | --------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
 | ![light-hard-example](./assets/example-4.png) | ![light-medium-example](./assets/example-5.png) | ![light-hard-example](./assets/example-6.png) |
 
+## Features
+
+- Access to each unique Gruvbox color (via `colors`)
+- Higher level theme colors (dark or light themes; hard, medium or soft contrast; via `theme-colors`)
+- Apply Gruvbox colors for common typst components (e.g. page bg/fg, borders, links; via `gruvbox`)
+- Supports printable documents
+- Code highlighting within `raw` elements
+- Extendable to other plugins (see [#in-depth-usage-example])
+
 ## Simple usage example
 
 ```typst
